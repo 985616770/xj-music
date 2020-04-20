@@ -7,13 +7,16 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"enhance": true,
+		"checkSiteMap": false
 	},
 	"appid": "wx242adee6cd49ab7a",
 	"projectname": "xj-music",
 	"libVersion": "2.10.4",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"compileType": "miniprogram",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -30,13 +33,39 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/playlist/playlist",
+					"pathName": "pages/playlist/playlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/musiclist/musiclist",
+					"pathName": "pages/musiclist/musiclist",
+					"query": "playlistId=2081858574",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/player/player",
+					"pathName": "pages/player/player",
+					"query": "playlistId=2081858574&index=3",
+					"scene": null
 				}
 			]
 		}

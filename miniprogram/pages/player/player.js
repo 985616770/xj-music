@@ -1,15 +1,29 @@
-// pages/demo/demo.js
+// pages/player/player.js
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    picUrl: ''
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
-
+  onLoad(options) {
+    const index = parseInt(options.index)
+    const nowPlayDetail = wx.getStorageSync('musiclist')
+    this._loadMusicDetail(nowPlayDetail, index)
+  },
+  _loadMusicDetail(playlist, index) {
+    let music = playlist[index]
+    wx.setNavigationBarTitle({
+      title: music.name
+    })
+    this.setData({
+      picUrl: music.al.picUrl
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -18,15 +32,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    wx.cloud
-      .callFunction({
-        name: 'login'
-      })
-      .then(res => {
-        console.log(res)
-      })
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏

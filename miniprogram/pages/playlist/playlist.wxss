@@ -1,1 +1,21 @@
-/* pages/playlist/playlist.wxss */
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20rpx;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.playlist-container-item{
+  margin-bottom: 20rpx;
+  flex: 0 0 30%;
+}
+
+.playlist-swiper-item {
+  width: 100%;
+  height: 100%;
+}
+.swiper-img {
+  width: 100%;
+  height: 100%;
+}
