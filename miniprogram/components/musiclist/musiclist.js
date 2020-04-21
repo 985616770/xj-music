@@ -1,4 +1,5 @@
-// components/musiclist/musiclist.js
+let app = getApp()
+
 Component({
   /**
    * 组件的属性列表
@@ -27,6 +28,13 @@ Component({
       })
       wx.navigateTo({
         url: `/pages/player/player?musicid=${musicid}&index=${index}`
+      })
+    }
+  },
+  pageLifetimes: {
+    show() {
+      this.setData({
+        playingId: parseInt(app.getPlayingMusicId())
       })
     }
   }

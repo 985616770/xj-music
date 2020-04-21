@@ -1,2 +1,13 @@
-<!--pages/blog/blog.wxml-->
-<text>pages/blog/blog.wxml</text>
+<view class="publish">
+  <!-- header -->
+  <view class="header">
+    <view class="publish-container" bind:tap="onPublish">
+      <i class="iconfont icon-publish"></i>
+    </view>
+    <view class="search-container">
+      <x-search iconfont="iconfont" icon-search="icon-search" />
+    </view>
+  </view>
+  <!-- footer -->
+  <x-bottom-model />
+</view>

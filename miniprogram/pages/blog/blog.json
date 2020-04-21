@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "x-search": "/components/search/search",
+    "x-bottom-model": "/components/bottom-model/bottom-model"
+  },
+  "navigationBarTitleText": "发布"
 }

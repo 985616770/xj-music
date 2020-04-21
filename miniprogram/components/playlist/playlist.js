@@ -1,8 +1,6 @@
-// components/playlist/playlist.js
+
+
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
     playlist: Object
   },
@@ -13,16 +11,9 @@ Component({
       })
     }
   },
-  /**
-   * 组件的初始数据
-   */
   data: {
     _count: 0
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
     _tranNumber(num, point) {
       let numStr = num.toString().split('.')[0]
@@ -39,8 +30,8 @@ Component({
     goToMusicList() {
       wx.navigateTo({
         url: `/pages/musiclist/musiclist?playlistId=${this.properties.playlist.id}`
-      });
-
+      })
     }
-  }
+  },
+ 
 })

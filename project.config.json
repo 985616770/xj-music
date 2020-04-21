@@ -38,33 +38,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pages/playlist/playlist",
-					"pathName": "pages/playlist/playlist",
+					"name": "pages/blog/blog",
+					"pathName": "pages/blog/blog",
 					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/musiclist/musiclist",
-					"pathName": "pages/musiclist/musiclist",
-					"query": "playlistId=2081858574",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/player/player",
-					"pathName": "pages/player/player",
-					"query": "playlistId=2081858574&index=3",
 					"scene": null
 				}
 			]

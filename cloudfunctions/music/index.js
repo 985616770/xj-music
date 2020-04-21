@@ -27,10 +27,21 @@ exports.main = async (event, context) => {
       })
   })
   app.router('musiclist', async (ctx, next) => {
-    ctx.body = await rp(BASE_URL + '/playlist/detail?id=' + parseInt(event.playlistId)).then(res => {
+    ctx.body = await rp(`${BASE_URL}/playlist/detail?id=${parseInt(event.playlistId)}`).then(res => {
       return JSON.parse(res)
     })
   })
 
+  app.router('musicUrl', async (ctx, next) => {
+
+    ctx.body = await rp(`${BASE_URL}/song/url?id=${event.musicId}`).then(res => {
+      return JSON.parse(res)
+    })
+  })
+  app.router('lyric', async (ctx, next) => {
+    ctx.body = await rp(`${BASE_URL}/lyric?id=${event.musicId}`).then(res => {
+      return JSON.parse(res)
+    })
+  })
   return app.serve()
 }

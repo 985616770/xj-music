@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "x-process-bar": "/components/progressBar/progressBar",
+    "x-lyric": "/components/lyric/lyric"
+  }
 }

@@ -6,6 +6,7 @@
   </block>
 </swiper>
 
+
 <view class="playlist-container ">
   <block wx:for="{{playlist}}" wx:key="id">
     <x-playlist class="playlist-container-item" playlist="{{item}}"></x-playlist>
