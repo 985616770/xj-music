@@ -3,7 +3,9 @@ Component({
   /**
    * 组件的属性列表
    */
-  properties: {},
+  properties: {
+    modalShow: Boolean
+  },
 
   /**
    * 组件的初始数据
@@ -11,12 +13,17 @@ Component({
   data: {},
   options: {
     // 允许向组件传样式
-    styleIsolation: 'apply-shared'
+    styleIsolation: 'apply-shared',
+    multipleSlots: true
   },
   /**
    * 组件的方法列表
    */
   methods: {
-    onClose() {}
+    onClose() {
+      this.setData({
+        modalShow: false
+      })
+    }
   }
 })

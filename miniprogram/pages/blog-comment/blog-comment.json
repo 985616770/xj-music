@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "x-blog-ctrl": "/components/blog-ctrl/blog-ctrl",
+    "x-blog-card": "/components/blog-card/blog-card"
+  },
+  "navigationBarTitleText": "正文"
+}

@@ -19,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-upload:before {
+.icon-star:before {
   content: '\e60f';
 }
 
@@ -63,7 +63,7 @@
   content: '\e633';
 }
 
-.icon-arrow:before {
+.icon-add:before {
   content: '\eaf3';
 }
 

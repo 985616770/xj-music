@@ -5,9 +5,18 @@
       <i class="iconfont icon-publish"></i>
     </view>
     <view class="search-container">
-      <x-search iconfont="iconfont" icon-search="icon-search" />
+      <x-search iconfont="iconfont" icon-search="icon-search" bind:search="onSearch" />
     </view>
   </view>
+  <!-- 博客卡片列表 -->
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+        <x-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="getComment" />
+        <x-blog-ctrl blogId="{{item._id}}"/>
+      </view>
+    </block>
+  </view>
   <!-- footer -->
-  <x-bottom-model />
+  <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail"></x-login>
 </view>

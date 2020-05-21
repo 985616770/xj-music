@@ -1,0 +1,68 @@
+.ctrl {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 100%;
+}
+
+.ctrl-item {
+  flex: 1;
+  text-align: center;
+  color: rgba(40, 47, 60, 0.8);
+  font-size: 26rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctrl-item .icon {
+  margin-right: 12rpx;
+  font-size: 32rpx;
+}
+
+.ctrl-item text {
+  font-size: 32rpx;
+}
+
+.comment-content {
+  width: 560rpx;
+  text-align: left;
+  padding: 20rpx;
+  font-size: 32rpx;
+}
+
+.send-btn {
+  background: #d43c33;
+  color: #fff;
+  font-size: 24rpx;
+  width: 300rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 20rpx 30rpx;
+  border-radius: 10rpx;
+  float: right;
+}
+button {
+  font-weight: normal !important;
+}
+.share-btn {
+  background-color: #fff !important;
+  color: rgba(40, 47, 60, 0.8) !important;
+  padding: 0 !important;
+  height: 100% !important;
+  border: none !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.share-btn::after {
+  display: none;
+}
+
+.share-hover::after {
+  border: 0;
+}

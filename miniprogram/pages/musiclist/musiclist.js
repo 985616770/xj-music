@@ -34,7 +34,7 @@ Page({
         })
         this._setMusicList()
         wx.hideLoading()
-      })
+      }) //
   },
   _setMusicList() {
     wx.setStorageSync('musiclist', this.data.musiclist)
