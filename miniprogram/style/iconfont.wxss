@@ -71,7 +71,7 @@
   content: '\e61c';
 }
 
-.icon-weibiaoti--:before {
+.icon-weibiaoti:before {
   content: '\e627';
 }
 

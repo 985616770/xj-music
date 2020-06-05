@@ -15,13 +15,29 @@ App({
     }
     // 全局变量
     this.globalData = {
-      playingMusicId: -1
+      playingMusicId: -1,
+      openid: -1
     }
+    this.getOpenId()
   },
   setPlayingMusicId(musicId) {
     this.globalData.playingMusicId = musicId
   },
   getPlayingMusicId() {
     return this.globalData.playingMusicId
+  },
+  // 获取openid
+  getOpenId() {
+    wx.cloud
+      .callFunction({
+        name: 'login'
+      })
+      .then(res => {
+        const { openid } = res.result
+        this.globalData.openid = openid
+        if (wx.getStorageSync(openid) == '') {
+          wx.setStorageSync(openid, [])
+        }
+      })
   }
 })

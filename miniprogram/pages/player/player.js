@@ -85,6 +85,9 @@ Page({
           bgAudioManger.coverImgUrl = this.data.picUrl
           bgAudioManger.singer = music.ar[0].name
           bgAudioManger.epname = music.al.name
+
+          // 保存播放历史
+          this.savePlayHistory()
         }
 
         this.setData({
@@ -101,7 +104,9 @@ Page({
           })
           .then(res => {
             let lyric = '暂无歌词'
-            const lrc = res.result.lrc
+            
+            const { lrc } = res.result
+
             if (lrc) {
               lyric = lrc.lyric
             }
@@ -155,5 +160,28 @@ Page({
     this.setData({
       isPlaying: false
     })
+  },
+  /**
+   * 保存播放历史
+   */
+  savePlayHistory() {
+    // 当前播放的歌曲
+    const music = musicList[nowPlayingIndex]
+    const { openid } = app.globalData
+    const history = wx.getStorageSync(openid)
+    let bHave = false
+    for (let i = 0, len = history.length; i < len; i++) {
+      if (history[i].id === music.id) {
+        bHave = true
+        break
+      }
+    }
+    if (!bHave) {
+      history.unshift(music)
+      wx.setStorage({
+        key: openid,
+        data: history
+      })
+    }
   }
 })

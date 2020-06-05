@@ -3,16 +3,30 @@
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
 		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
+		"es6": false,
 		"enhance": true,
-		"checkSiteMap": false
+		"postcss": true,
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx242adee6cd49ab7a",
 	"projectname": "xj-music",
-	"libVersion": "2.10.4",
+	"libVersion": "2.11.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"compileType": "miniprogram",
@@ -41,17 +55,16 @@
 			"current": -1,
 			"list": [
 				{
-					"id": 0,
-					"name": "pages/blog/blog",
-					"pathName": "pages/blog/blog",
+					"id": -1,
+					"name": "pages/profile-playhistory/profile-playhistory",
+					"pathName": "pages/profile-playhistory/profile-playhistory",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": 1,
-					"name": "pages/blog-edit/blog-edit",
-					"pathName": "pages/blog-edit/blog-edit",
-					"query": "avatarUrl=123&nickName=123",
+					"id": -1,
+					"name": "pages/profile-bloghistory/profile-bloghistory",
+					"pathName": "pages/profile-bloghistory/profile-bloghistory",
 					"scene": null
 				}
 			]

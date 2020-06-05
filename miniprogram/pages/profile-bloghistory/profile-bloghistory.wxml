@@ -1,0 +1,6 @@
+<view>
+  <block wx:for="{{blogList}}" wx:key="_id">
+    <x-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="getComment" />
+    <x-blog-ctrl blogId="{{item._id}}" blog="{{item}}" />
+  </block>
+</view>
